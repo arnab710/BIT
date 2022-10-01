@@ -1,6 +1,4 @@
 //generate all the subsets using BITMASKING
-//see striver : https://youtu.be/ZwU6wSkepBI?t=2959
-
 class Solution {
 public:
     vector<vector<int>> subsets(vector<int>& nums) {
