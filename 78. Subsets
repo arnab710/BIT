@@ -1,0 +1,26 @@
+//generate all the subsets using BITMASKING
+
+class Solution {
+public:
+    vector<vector<int>> subsets(vector<int>& nums) {
+        
+        int n = nums.size();
+        int m = (1<<n); //all the possiblities 2^n expressed in binary......
+    
+        vector<vector<int>> ans;
+        for(int i = 0;i < m;i++){
+            
+            vector<int> temp;
+            int ind = 0;
+            int j = i;
+            while(j!=0){   // checking the 1th pos of i ..... how I put the ans
+                
+                if(j&1) temp.push_back(nums[ind]);
+               j = j>>1;
+                ind++;
+            }
+            ans.push_back(temp);
+        }
+        return ans;
+    }
+};
