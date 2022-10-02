@@ -1,15 +1,15 @@
 Conversion of capital letter to small letter : cout<< char('F' | ' '); // or with space.....
 code :
    char ans ;
-   ans = ('F' | ' '); 
-   cout<<ans; 
-ans = 'f' ;  
+   ans = ('F' | ' ');                           
+   cout<<ans;                                       https://youtu.be/XjtYsFjXtoE?list=PLauivoElc3giVROwL-6g9hO-LlSen_NaV
+ans = 'f' 
 _____________________________________________________________________________________________
 
 Conversion of small letter to capital letter : cout<<char('f' & '_'); // and with underscore........
 code:
  char ans ;
     ans = ('f' & '_');
-    cout<<ans; 
+    cout<<ans;                                       https://youtu.be/XjtYsFjXtoE?list=PLauivoElc3giVROwL-6g9hO-LlSen_NaV
 ans = 'F'
 ________________________________________________________________________________________________
