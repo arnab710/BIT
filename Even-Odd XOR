@@ -1,0 +1,66 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+#define ll  long long
+#define ull unsigned long long 
+#define ld long double 
+ 
+//// upto 8 bits bin to dec && vice-e-verca.../////
+void dec_bin(int a) {for(int i = 8;i>=0;i--) cout<<((a>>i)&1);} 
+void bin_dec(long long a){int power=1;int ans=0;while(a){int rem=a%10;a/=10;ans+=rem*power;power*=2;}cout<<ans;}
+
+
+void judge(){
+
+    ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+    #ifndef ONLINE_JUDGE
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
+#endif
+}
+ ////// I come in a conclusion that a consecutive 4 numbers odd and even place's XOR are always same because .. n and n-1 er moddhe difference hoy just 1 er ...r jokhon 4 te consecutive odd and even place er moddhe XOR kori , tokhon 1 and 1 cancel out hoye jay.... 
+void helper(){ // see : https://youtu.be/qUbZSysbcSw .....
+                // we can start from any even number because odd and taar consecutive even er moddhe 1 er flag ekta step upore chole jaay .. so discrepency chole asbe .. take dry run and understand....
+
+    int n;
+    cin>>n;
+if(n==3) cout<<1<<" "<<3<<" "<<2;
+    else if((n%4)==0){
+
+        int s = 2;
+        while(n--) cout<<s++<<" ";
+    }
+    else if((n%4)==1){
+
+        int s = 2;
+        cout<<0<<" ";
+        n--;
+        while(n--) cout<<s++<<" ";
+    }
+    else if((n%4)==2){
+
+        cout<<2<<" "<<1<<" "<<3<<" "<<4<<" "<<12<<" "<<8<<" ";
+        n-= 6;
+        int s = 14;
+        while(n--)  cout<<s++<<" ";
+    }
+    else{
+        cout<<2<<" "<<1<<" "<<3<<" ";
+        n -= 3;
+        int s = 4;
+
+        while(n--) cout<<s++<<" ";
+    }
+}
+int main(){
+    judge();
+
+    int tt;
+    cin>>tt;
+
+    while(tt--){
+    helper();
+    cout<<"\n";
+}
+    return 0;
+}
